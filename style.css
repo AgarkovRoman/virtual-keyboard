@@ -1,0 +1,81 @@
+body {
+    margin: 0 20%;
+    font-family: 'Baloo Thambi 2', sans-serif;
+    user-select: none;
+    background: rgb(32, 32, 32);
+}
+
+textarea {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Baloo Thambi 2', sans-serif;
+    color: rgb(25, 32, 46);
+    width: 830px;
+    height: 20vh;
+    outline: 0;
+    outline-offset: 0;
+    background: rgb(189, 189, 189);
+}
+
+/* .keybord {
+    /* width: 850px; } */
+
+.keybord-row {
+    /* width: 100%; */
+    height: 50px;
+    display: flex;
+    margin-bottom: 10px;
+    outline: 0;
+    outline-offset: 0;
+    width: 850px;
+}
+
+.keybord-key {
+    background: #003366;
+    width: 5%;
+    min-height: 100%;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #003366;
+    cursor: pointer;
+    user-select: none;
+}
+
+.key-active {
+    border-radius: 35px;
+    background: rgb(80, 101, 194);
+    transition: all .1s ease;
+}
+
+.keybord-key:hover {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.keybord-key:not(:last-child) {
+    margin-right: 5px;
+}
+
+.keybord-key.Backspace,
+.keybord-key.Enter,
+.keybord-key.CapsLock,
+.keybord-key.ShiftLeft,
+.keybord-key.ShiftRight,
+.keybord-key.Space {
+    flex-grow: 1;
+}
+
+.keybord-key.Tab,
+.keybord-key.Delete {
+    flex-grow: 2;
+}
+
+.keybord-key.ControlLeft,
+.keybord-key.ControlRight {
+    flex-grow: 0.14;
+}
