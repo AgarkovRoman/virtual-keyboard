@@ -6,16 +6,15 @@ function loadingFunction() {
     document.querySelector('body').insertAdjacentHTML('beforeend', keyboardHTML);
 }
 
-const input = document.querySelector('.input');
-const keybord = document.querySelector('.keybord');
-const allButtons = document.querySelectorAll('.keybord-key');
-const allcaseDown = document.querySelectorAll('.caseDown');
-const allcaseUp = document.querySelectorAll('.caseUp');
-const allDataRus = document.querySelectorAll('.rus');
-const allDataEng = document.querySelectorAll('.eng');
 
 function main() {
-
+    const input = document.querySelector('.input');
+    const keybord = document.querySelector('.keybord');
+    const allButtons = document.querySelectorAll('.keybord-key');
+    const allcaseDown = document.querySelectorAll('.caseDown');
+    const allcaseUp = document.querySelectorAll('.caseUp');
+    const allDataRus = document.querySelectorAll('.rus');
+    const allDataEng = document.querySelectorAll('.eng');
 
     function toggleLanguage(func, ...codes) {
         let pressed = new Set();
@@ -42,6 +41,9 @@ function main() {
     );
 
     function switchLanguage() {
+        const allDataRus = document.querySelectorAll('.rus');
+        const allDataEng = document.querySelectorAll('.eng');
+
         for (i = 0; i < allDataRus.length; i++) {
             if (allDataRus[i].classList.contains('hidden')) {
                 allDataRus[i].classList.remove('hidden');
@@ -60,12 +62,26 @@ function main() {
 
     //добаляю класс активной кнопке при нажатии клавиши
     document.addEventListener('keydown', function (event) {
+        const input = document.querySelector('.input');
+        const keybord = document.querySelector('.keybord');
+        const allButtons = document.querySelectorAll('.keybord-key');
+        const allcaseDown = document.querySelectorAll('.caseDown');
+        const allcaseUp = document.querySelectorAll('.caseUp');
+        const allDataRus = document.querySelectorAll('.rus');
+        const allDataEng = document.querySelectorAll('.eng');
         event.preventDefault();
         for (let i = 0; i < allButtons.length; i++) {
             if (allButtons[i].classList.contains(event.code)) {
                 allButtons[i].classList.add('key-active');
 
                 function outputsContentButton() {
+                    const input = document.querySelector('.input');
+                    const keybord = document.querySelector('.keybord');
+                    const allButtons = document.querySelectorAll('.keybord-key');
+                    const allcaseDown = document.querySelectorAll('.caseDown');
+                    const allcaseUp = document.querySelectorAll('.caseUp');
+                    const allDataRus = document.querySelectorAll('.rus');
+                    const allDataEng = document.querySelectorAll('.eng');
                     let allchildNodesinButton = allButtons[i].childNodes;
                     let dataIndex = allButtons[i].childNodes[1].dataset.eng;
                     for (let i = 0; i < allchildNodesinButton.length; i++) {
@@ -131,6 +147,13 @@ function main() {
 
     //удаляю класс активной кнопки при отжатии клавиши
     document.addEventListener('keyup', function (event) {
+        const input = document.querySelector('.input');
+        const keybord = document.querySelector('.keybord');
+        const allButtons = document.querySelectorAll('.keybord-key');
+        const allcaseDown = document.querySelectorAll('.caseDown');
+        const allcaseUp = document.querySelectorAll('.caseUp');
+        const allDataRus = document.querySelectorAll('.rus');
+        const allDataEng = document.querySelectorAll('.eng');
         for (let i = 0; i < allButtons.length; i++) {
             if (allButtons[i].classList.contains(event.code)) {
                 allButtons[i].classList.remove('key-active');
@@ -162,11 +185,25 @@ function main() {
 
     //добаляю класс активной кнопке при нажатии мышкой и вывожу в инпут
     document.addEventListener('mousedown', (event) => {
+        const input = document.querySelector('.input');
+        const keybord = document.querySelector('.keybord');
+        const allButtons = document.querySelectorAll('.keybord-key');
+        const allcaseDown = document.querySelectorAll('.caseDown');
+        const allcaseUp = document.querySelectorAll('.caseUp');
+        const allDataRus = document.querySelectorAll('.rus');
+        const allDataEng = document.querySelectorAll('.eng');
         if (event.target.tagName === 'SPAN') {
             keybord.querySelectorAll('div').forEach(element => element.classList.remove('key-active'));
             event.target.parentNode.classList.add('key-active');
 
             function outputsContentButton() {
+                const input = document.querySelector('.input');
+                const keybord = document.querySelector('.keybord');
+                const allButtons = document.querySelectorAll('.keybord-key');
+                const allcaseDown = document.querySelectorAll('.caseDown');
+                const allcaseUp = document.querySelectorAll('.caseUp');
+                const allDataRus = document.querySelectorAll('.rus');
+                const allDataEng = document.querySelectorAll('.eng');
                 let dataIndex = event.target.dataset.eng;
                 switch (dataIndex) {
                     case '14':
@@ -214,6 +251,13 @@ function main() {
 
     //удаляю класс активной кнопки при отжатии мышкой
     document.addEventListener('mouseup', (event) => {
+        const input = document.querySelector('.input');
+        const keybord = document.querySelector('.keybord');
+        const allButtons = document.querySelectorAll('.keybord-key');
+        const allcaseDown = document.querySelectorAll('.caseDown');
+        const allcaseUp = document.querySelectorAll('.caseUp');
+        const allDataRus = document.querySelectorAll('.rus');
+        const allDataEng = document.querySelectorAll('.eng');
         for (i = 0; i < allButtons.length; i++) {
             if (allButtons[i].classList.contains('key-active')) {
                 allButtons[i].classList.remove('key-active');
