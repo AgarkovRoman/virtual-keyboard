@@ -159,7 +159,7 @@ function main() {
     });
 
     //добаляю класс активной кнопке при нажатии мышкой и вывожу в инпут
-    keybord.addEventListener('mousedown', (event) => {
+    document.addEventListener('mousedown', (event) => {
         if (event.target.tagName === 'SPAN') {
             keybord.querySelectorAll('div').forEach(element => element.classList.remove('key-active'));
             event.target.parentNode.classList.add('key-active');
@@ -211,7 +211,7 @@ function main() {
     });
 
     //удаляю класс активной кнопки при отжатии мышкой
-    keybord.addEventListener('mouseup', (event) => {
+    document.addEventListener('mouseup', (event) => {
         for (i = 0; i < allButtons.length; i++) {
             if (allButtons[i].classList.contains('key-active')) {
                 allButtons[i].classList.remove('key-active');
