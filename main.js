@@ -6,14 +6,16 @@ function loadingFunction() {
     document.querySelector('body').insertAdjacentHTML('beforeend', keyboardHTML);
 }
 
+const input = document.querySelector('.input');
+const keybord = document.querySelector('.keybord');
+const allButtons = document.querySelectorAll('.keybord-key');
+const allcaseDown = document.querySelectorAll('.caseDown');
+const allcaseUp = document.querySelectorAll('.caseUp');
+const allDataRus = document.querySelectorAll('.rus');
+const allDataEng = document.querySelectorAll('.eng');
+
 function main() {
-    const input = document.querySelector('.input');
-    const keybord = document.querySelector('.keybord');
-    const allButtons = document.querySelectorAll('.keybord-key');
-    const allcaseDown = document.querySelectorAll('.caseDown');
-    const allcaseUp = document.querySelectorAll('.caseUp');
-    const allDataRus = document.querySelectorAll('.rus');
-    const allDataEng = document.querySelectorAll('.eng');
+
 
     function toggleLanguage(func, ...codes) {
         let pressed = new Set();
